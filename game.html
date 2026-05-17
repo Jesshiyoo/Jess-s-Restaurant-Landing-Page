@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Catcher Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <h2><a href="index.html">Jesshiyoo's Café House</a></h2>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#games">Games</a></li>
+        </ul>
+    </nav>
+    <!-- SCORE BAR -->
+    <div class="details">
+        <div id="score">Score: 0</div>
+        <div id="hi-score">High Score: 0</div>
+        <button id="actions">Pause</button>
+    </div>
+    <!-- GAME AREA -->
+    <div class="game-container">
+        <!-- START SCREEN -->
+        <div id="start-screen">
+            <h1>Coffee Catcher</h1>
+            <p>Catch green items, avoid red items</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+        <!-- TIMER -->
+        <div class="ui-overlay">
+            <div id="timer">Time: 30</div>
+        </div>
+        <!-- INSTRUCTIONS -->
+        <div class="instructions">
+            <p class="good">GREEN = GOOD (+1)</p>
+            <p class="bad">RED = BAD (-1)</p>
+            <p class="hint">Move slider or mouse</p>
+        </div>
+        <!-- PLAYER -->
+        <div id="basket"></div>
+        <!-- GAME OVER -->
+        <div id="game-over" class="hidden">
+            <h1>Game Over</h1>
+            <p id="final-score"></p>
+            <p id="final-high"></p>
+            <button onclick="location.reload()">Restart</button>
+            <a href="index.html#games" class="back-link">← Back to site</a>
+        </div>
+    </div>
+    <!-- SLIDER -->
+    <input type="range" id="slider" min="0" max="700" value="350" />
+</body>
+</html>
